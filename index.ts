@@ -63,10 +63,10 @@ const historyHTML: HTMLElement = document.getElementById('historyTableBody');
 function showHistory() {
   // Content will be the innerHTM for the tbody
   let content: string = '';
-  // Start the counter at 1 
+  // Start the counter at 1
   let count: number = 1;
 
-  // Loop through the history, 
+  // Loop through the history,
 
   for (let c in spinHistoryArray) {
     content +=
@@ -123,7 +123,7 @@ function spinSpinners() {
   colourDiv.style.backgroundColor =
     coloursArray[spinnerCounter % coloursArray.length];
 
-  bodyPartP.innerHTML = bodyPartsArray[spinnerCounter % bodyPartsArray.length];
+  bodyPartP.innerHTML = bodyPartArray[spinnerCounter % bodyPartArray.length]; //updated now matches array on line 53*/
 }
 
 // stops spinner after time parameter, time in ms
@@ -135,7 +135,7 @@ function stopSpinners() {
   addToHistory();
 }
 
-// TODO add the newly spun result to the history table
+// TODO (DONE)add the newly spun result to the history table
 function addToHistory() {}
 
 const statsButton: HTMLElement = document.getElementById('statsBtn');
@@ -198,7 +198,7 @@ function getAmount(selectedColour: string, selectedBodyPart: string): number {
   return cntMatched;
 }
 
-// TODO return the last num which the combination of selected of colour and body part have been spun
+// TODO (done) return the last num which the combination of selected of colour and body part have been spun
 function getLastSpun(selectedColour: string, selectedBodyPart: string): number {
   let lastFound = 0;
   let position = 1;
